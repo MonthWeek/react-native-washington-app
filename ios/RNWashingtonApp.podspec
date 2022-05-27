@@ -1,12 +1,12 @@
 
 Pod::Spec.new do |s|
   s.name         = "RNWashingtonApp"
-  s.version      = "1.0.0"
-  s.summary      = "this is designed fo"
+  s.version      = "1.0.1"
+  s.summary      = "this is designed for washington app"
   s.description  = <<-DESC
-                  this is designed fo
+                  this is designed for washington app
                    DESC
-  s.homepage     = ""
+  s.homepage     = "https://github.com/MonthWeek/react-native-washington-app"
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "author" => "xxx@example.com" }
