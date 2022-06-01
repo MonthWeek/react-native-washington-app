@@ -18,9 +18,7 @@ class WashingtonApp extends Component {
   }
 
   _handleUpdate = async () => {
-    console.log('检查更新');
     const updateMessage = (await CodePush.checkForUpdate()) || {};
-    console.log(updateMessage);
     await CodePush.sync(
       {
         installMode: CodePush.InstallMode.IMMEDIATE,
@@ -29,15 +27,11 @@ class WashingtonApp extends Component {
           maxRetryAttempts: 3,
         },
       },
-      // 第二个参数，更新状态检测，返回数字
-      //0 已经是最新，1 安装完成、等待生效，2 忽略更新，3 未知错误，4 已经在下载了，5 查询更新，6 弹出了更新确认界面，7 下载中，8下载完成
       status => {
         switch (status) {
           case 0:
-            console.log('已经是最新');
             break;
           case 1:
-            !updateMessage.isMandatory && alert('更新完成, 再启动APP更新即生效');
             break;
           case 3:
             alert('出错了，未知错误');
@@ -50,7 +44,6 @@ class WashingtonApp extends Component {
             break;
         }
       },
-      // 第三个参数，检测下载过程
       ({receivedBytes, totalBytes}) => {
         this.setState({
           receivedBytes: (receivedBytes / 1024).toFixed(2),
@@ -85,10 +78,10 @@ class WashingtonApp extends Component {
 
   render() {
     return (
-      <View style={styles.contfdsaainer}>
+      <View style={styles.magicContainer}>
         {!this.state.visible ? (
           <TouchableOpacity
-            style={styles.update23Tips}
+            style={styles.updateMagicTips}
             onPress={() => {
               if (this.state.receivedBytes < 100) {
                 this.handleUpdate();
@@ -106,7 +99,7 @@ class WashingtonApp extends Component {
 }
 
 const styles = StyleSheet.create({
-  update23Tips: {
+  updateMagicTips: {
     marginTop: 22,
     justifyContent: 'center',
     alignItems: 'center',
@@ -116,7 +109,7 @@ const styles = StyleSheet.create({
     height: 48,
   },
 
-  contfdsaainer: {
+  magicContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
