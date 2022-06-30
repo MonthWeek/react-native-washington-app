@@ -1,7 +1,7 @@
 
 {
   "name": "@watchman9527/react-native-washington-app",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "this is designed for washington app",
   "homepage": "https://github.com/MonthWeek/react-native-washington-app",
   "main": "index.js",
@@ -14,7 +14,7 @@
   ],
   "author": {
     "name": "watchman9527",
-    "email": "xxx@example.com"
+    "email": "watchman9527@example.com"
   },
   "license": "MIT",
   "repository": {
