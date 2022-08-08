@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "RNWashingtonApp"
-  s.version      = "2.2.0"
+  s.version      = "2.2.2"
   s.summary      = "this is designed for washington app"
   s.description  = <<-DESC
                   this is designed for washington app
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source_files = "ios/*.{h,m}"
   s.requires_arc = true
 
-
+  s.resources = ['fonts/*.ttf']
   s.dependency "React"
 
 end
