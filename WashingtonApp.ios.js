@@ -1,6 +1,6 @@
 import {Alert, Dimensions, StyleSheet, Text, TouchableOpacity, View, NativeModules} from 'react-native';
 import {Component} from 'react';
-import CodePush from '@watchman9527/react-native-washington-push';
+import CodePush from 'react-native-code-push';
 import NetInfo from '@react-native-community/netinfo';
 import React from 'react';
 import SplashScreen from 'react-native-splash-screen';
@@ -29,13 +29,6 @@ class WashingtonApp extends Component {
       },
       status => {
         switch (status) {
-          case 0:
-            break;
-          case 1:
-            break;
-          case 3:
-            alert('出错了，未知错误');
-            break;
           case 7:
             this.setState({visible: true});
             break;
